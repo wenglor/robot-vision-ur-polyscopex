@@ -11,7 +11,7 @@ This repository demonstrates how to use the Generic Vision Interface with wenglo
 1. [Prerequisites](#prerequisites)
 2. [Installation](#installation)
 3. [Running the Sample Program](#running-the-sample-program)
-4. [Configuration)](#configuration)
+4. [Configuration](#configuration)
 5. [Troubleshooting](#troubleshooting)
    1. [Communication errors](#communication-errors)
    2. [Insufficient Calibration Accuracy](#insufficient-calibration-accuracy)
