@@ -88,5 +88,5 @@ You can improve calibration accuracy by using more than five calibration poses. 
 
 ## Support & Feedback
 
-- **Bugs:** Please open a new Issue in the [GitHub Issues section]((../../issues)) if needed
+- **Bugs:** Please open a new Issue in the [GitHub Issues section](../../issues) if needed
 - **Feature Requests & Ideas:** Discuss suggestions in the Discussions → Ideas category under [GitHub Discussions](../../discussions)
