@@ -26,18 +26,13 @@ This repository demonstrates how to use the Generic Vision Interface with wenglo
 - Basic knowledge of **URScript**
 - PolyscopeX compatible ControlBox (Version >= CB5.6)  controller + eSeries arms or UR Series arms
 - [B60](https://www.wenglor.com/de/Machine-Vision/Smart-Cameras-und-Vision-Sensoren/Smart-Camera-B60/c/cxmCID221375) (Firmware >= 1.5) or [Machine Vision Controller (MVC)](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Controller/c/cxmCID221381) (Firmware >= 1.2)
-- A [univision](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Software/Bildverarbeitungssoftware-uniVision-3/c/cxmCID222459) job for calibration and object detection
+- A [uniVision](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Software/Bildverarbeitungssoftware-uniVision-3/c/cxmCID222459) job for calibration and object detection
 
 ---
 
 ## Installation
 
-1. Clone this repository
-
-   ```shell
-   git clone https://github.com/wenglor/ur-vision-generic.git
-   ```
-
+1. Get the files from the [sources](sources) directory.
 2. Import the program file [Generic wenglor interface.urpx file](sources/Generic%20wenglor%20interface.urpx) from the [sources](sources) folder via the poxyscopeX interface to the robot controller.
 3. Follow the [configuration](#configuration) steps.
 
