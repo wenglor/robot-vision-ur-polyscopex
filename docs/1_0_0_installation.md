@@ -13,8 +13,8 @@ The **wenglor robot vision** example ships as a single Polyscope X program file 
 | Controller | Polyscope X compatible ControlBox (version ≥ CB5.6) |
 | Robot arm | e-Series or UR Series arm |
 | Knowledge | Basic knowledge of URScript |
-| Machine Vision Device | [B60](https://www.wenglor.com/de/Machine-Vision/Smart-Cameras-und-Vision-Sensoren/Smart-Camera-B60/c/cxmCID221375) (firmware ≥ 1.4) or [Machine Vision Controller (MVC)](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Controller/c/cxmCID221381) (firmware ≥ 1.1) |
-| uniVision job | A [uniVision](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Software/Bildverarbeitungssoftware-uniVision-3/c/cxmCID222459) job for calibration and object detection |
+| Machine Vision Device | [B60](https://www.wenglor.com/B60) (firmware ≥ 1.4) or [Machine Vision Controller (MVC)](https://www.wenglor.com/MachineVisionController) (firmware ≥ 1.1) |
+| uniVision job | A [uniVision](https://www.wenglor.com/uniVision3) job for calibration and object detection |
 | Network | Robot and Machine Vision Device in the same network |
 
 ## Commissioning steps
@@ -38,7 +38,7 @@ graph LR
 
 1. On the UR Teach Pendant, open the Polyscope X **Program** interface and choose to import a program file.
 
-   <!-- PLACEHOLDER IMAGE: Polyscope X program import dialog -->
+   <!-- Polyscope X program import dialog -->
    <figure class="align-left">
    <img src="images/01_program_import_dialog.png" alt="Polyscope X program import dialog" class="uniform-width-600"/>
    </figure>
@@ -46,7 +46,7 @@ graph LR
 2. Browse to `Generic wenglor interface.urpx` and select it.
 3. Confirm the import. Polyscope X loads the program together with its `wenglor_examples`, `wenglor_api`, and `wenglor_helpers` modules.
 
-   <!-- PLACEHOLDER IMAGE: Program tree after import showing the three wenglor modules -->
+   <!-- Program tree after import showing the three wenglor modules -->
    <figure class="align-left">
    <img src="images/03_safety_prompt.png" alt="Enter safety password" class="uniform-width-400"/>
    </figure>
@@ -55,6 +55,6 @@ graph LR
 
 !!! note
 
-    On the Machine Vision Device website (tab `Jobs` → `Robot Server`), make sure the robot server is active. See [Settings on Device Website](https://wenglor.github.io/robot-vision-generic-string/4_3_0_settings_on_device_website/) in the wenglor robot vision manual.
+    On the Machine Vision Device website (tab `Jobs` → `Robot Server`), make sure the robot server is active. See [Settings on Device Website](https://wenglor.github.io/robot-vision-generic-string/5_2_0_settings_on_device_website/) in the wenglor robot vision manual.
 
 Once the program is imported, continue with [User Configuration](2_0_0_user_configuration.md) to configure the connection, jobs, and poses.
