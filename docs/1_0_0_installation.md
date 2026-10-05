@@ -43,6 +43,10 @@ graph LR
    <img src="images/01_program_import_dialog.png" alt="Polyscope X program import dialog" class="uniform-width-600"/>
    </figure>
 
+  <figure class="align-left">
+   <img src="images/02_open_program.png" alt="Open Polyscope X program dialog" class="uniform-width-600"/>
+  </figure>
+
 2. Browse to `Generic wenglor interface.urpx` and select it.
 3. Confirm the import. Polyscope X loads the program together with its `wenglor_examples`, `wenglor_api`, and `wenglor_helpers` modules.
 
