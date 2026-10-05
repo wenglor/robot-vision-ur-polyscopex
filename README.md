@@ -1,6 +1,6 @@
 # Example Universal Robots Polyscope X program for the generic vision interface
 
-**Example program version:** 1.0.0
+**Example program version:** 1.2.0
 
 This repository demonstrates how to use the Generic Vision Interface with wenglor vision devices on a UR Polyscope X controller. The included [Generic wenglor interface.urpx](sources/Generic%20wenglor%20interface.urpx) file acts as a working sample program that you can adapt and customize for your application.
 
