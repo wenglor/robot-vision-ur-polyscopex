@@ -1,8 +1,8 @@
 # Example Universal Robots Polyscope X program for the generic vision interface
 
-**Example program version:** 1.0.0
+**Example program version:** 1.2.0
 
-This repository demonstrates how to use the Generic Vision Interface with wenglor vision devices on a UR Polyscope X controller. The included [Generic wenglor interface.urpx](sources/Generic%20wenglor%20interface.urpx) file acts as a working sample program that you can adopt and customize for your application.
+This repository demonstrates how to use the Generic Vision Interface with wenglor vision devices on a UR Polyscope X controller. The included [Generic wenglor interface.urpx](sources/Generic%20wenglor%20interface.urpx) file acts as a working sample program that you can adapt and customize for your application.
 
 > NOTE
 >
@@ -36,8 +36,8 @@ This repository demonstrates how to use the Generic Vision Interface with wenglo
 - Polyscope X compatible ControlBox (version ≥ CB5.6).
 - e-Series or UR Series robot arm.
 - Basic knowledge of URScript.
-- A [B60](https://www.wenglor.com/de/Machine-Vision/Smart-Cameras-und-Vision-Sensoren/Smart-Camera-B60/c/cxmCID221375) (firmware ≥ 1.4) or [Machine Vision Controller (MVC)](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Controller/c/cxmCID221381) (firmware ≥ 1.1).
-- A [uniVision](https://www.wenglor.com/de/Machine-Vision/Machine-Vision-Software/Bildverarbeitungssoftware-uniVision-3/c/cxmCID222459) job for calibration and object detection.
+- A [B60](https://www.wenglor.com/B60) (firmware ≥ 1.4) or [Machine Vision Controller (MVC)](https://www.wenglor.com/MachineVisionController) (firmware ≥ 1.1).
+- A [uniVision](https://www.wenglor.com/uniVision3) job for calibration and object detection.
 - Robot and Machine Vision Device in the same network.
 
 ---
@@ -86,7 +86,7 @@ All parameters and poses are located in the **Installation** node tree under **B
 - `g_detection_pose` — Pose the robot moves to for object detection and validation. Teach this pose via **Set Expression** → **Edit Waypoint**.
 - `WG_CALIB_POSE_1` … `WG_CALIB_POSE_5` — The five calibration poses; teach each one.
 
-See the [User Configuration](https://wenglor.github.io/robot-vision-ur-polyscopex/2_0_user_configuration/) page for the full variable list, including the validation offset and the `update_reference_frame` workflow (`WG_MACHINE_POSES_TAUGHT`, `G_POSE_IN_MACHINE`).
+See the [User Configuration](https://wenglor.github.io/robot-vision-ur-polyscopex/2_0_0_user_configuration/) page for the full variable list, including the validation offset and the `update_reference_frame` workflow (`WG_MACHINE_POSES_TAUGHT`, `G_POSE_IN_MACHINE`).
 
 ---
 
@@ -102,7 +102,7 @@ See the [User Configuration](https://wenglor.github.io/robot-vision-ur-polyscope
 
 You can improve calibration accuracy by using more than five calibration poses. Add additional calibration movements — each followed by a call to `wenglor_api.add_calibration_pose` — in `Program → wenglor_api → run_calibration`, after the existing `WG_CALIB_POSE_5` step and before `calibration:calculate[...]` is sent.
 
-See the [Troubleshooting](https://wenglor.github.io/robot-vision-ur-polyscopex/4_0_troubleshooting/) page for more, including error codes returned by the device and reasons the program may exit unexpectedly.
+See the [Troubleshooting](https://wenglor.github.io/robot-vision-ur-polyscopex/4_0_0_troubleshooting/) page for more, including error codes returned by the device and reasons the program may exit unexpectedly.
 
 ---
 

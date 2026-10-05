@@ -4,10 +4,6 @@ All parameters and poses you need to adapt to your setup are located in the **In
 
 <img src="images/04_user_config_variables.png" alt="User Config folder in Before Start" class="uniform-width-800"/>
 
-!!! note
-
-    The screenshot above shows an earlier revision of the example that used lowercase `g_*` variable names (e.g. `g_cam_ip`, `g_use_case`). The current `Generic wenglor interface.urpx` uses the `WG_*` names documented below — the folder layout and workflow are otherwise unchanged.
-
 ## Connection
 
 /// html | div.col-widths
@@ -45,10 +41,6 @@ Configure three uniVision jobs. The suffix `.u3p` is mandatory and the name must
 ///
 
 ## Poses
-
-!!! note
-
-    `g_detection_pose` and `G_POSE_IN_MACHINE` (see [Reference frame workflow](#reference-frame-workflow-update_reference_frame-only) below) intentionally keep a different naming convention than the `WG_*`-prefixed variables elsewhere in the source program. This is not a documentation error — it reflects the actual variable names in `Generic wenglor interface.urpx`.
 
 /// html | div.col-widths
     attrs: {style: "--w1: 25%; --w2: 75%;"}
@@ -95,6 +87,6 @@ For `G_POSE_IN_MACHINE`, set the reference frame to `w_ref_frame` before teachin
 
 !!! note
 
-    Also make sure the robot manufacturer is set correctly on the Machine Vision Device website (tab `Jobs` → `Robot Server`). See [Settings on Device Website](https://wenglor.github.io/robot-vision-generic-string/4_3_0_settings_on_device_website/) in the wenglor robot vision manual.
+    Also make sure the robot manufacturer is set correctly on the Machine Vision Device website (tab `Jobs` → `Robot Server`). See [Settings on Device Website](https://wenglor.github.io/robot-vision-generic-string/5_2_0_settings_on_device_website/) in the wenglor robot vision manual.
 
 Once configuration is complete, continue with [Robot Program](3_0_0_robot_program.md) to run calibration and detection.

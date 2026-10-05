@@ -38,7 +38,7 @@ The calibration process differs depending on whether the camera is mounted on th
 
 !!! note
 
-    For the general calibration concepts — which calibration plate to use, how to choose and vary the poses, and how to read the reprojection error — see the [wenglor Robot Server overview](https://wenglor.github.io/robot-vision-generic-string/4_0_0_robot_vision_server/) in the wenglor robot vision manual. The description here does not repeat them.
+    For the general calibration concepts — which calibration plate to use, how to choose and vary the poses, and how to read the reprojection error — see the [wenglor Robot Server overview](https://wenglor.github.io/robot-vision-generic-string/5_1_0_basics_with_robot_server/) in the wenglor robot vision manual. The description here does not repeat them.
 
 The poses are taught as `WG_CALIB_POSE_1` … `WG_CALIB_POSE_5`; `wenglor_api.run_calibration` moves through each of them in sequence, calling `wenglor_api.add_calibration_pose` (which issues `calibration:add[...]`) at every pose:
 
@@ -79,7 +79,7 @@ Prerequisite: the calibration plate must be visible from `g_detection_pose`. Add
 
 !!! note
 
-    For what a good calibration looks like (Z-axis orientation, expected reprojection error values), see the [wenglor Robot Server overview](https://wenglor.github.io/robot-vision-generic-string/4_0_0_robot_vision_server/) in the wenglor robot vision manual.
+    For what a good calibration looks like (Z-axis orientation, expected reprojection error values), see the [wenglor Robot Server overview](https://wenglor.github.io/robot-vision-generic-string/5_1_0_basics_with_robot_server/) in the wenglor robot vision manual.
 
 ## Detection
 
@@ -113,7 +113,7 @@ end
 
 ### `update_reference_frame`
 
-See [4.6 Target Pose and Camera-to-Target Calibration](https://wenglor.github.io/robot-vision-generic-string/4_6_0_target_pose_and_camera_to_target/) in the wenglor robot vision manual for the underlying `target:pose` command.
+See [5.5 Job in uniVision to Get Target Pose or Calibrate Camera to Target](https://wenglor.github.io/robot-vision-generic-string/5_5_0_target_pose_and_camera_to_target/) in the wenglor robot vision manual for the underlying `target:pose` command.
 
 1. Loads `WG_FIND_TARGET_JOB`, moves to `g_detection_pose`, and triggers a calibration-target detection via `wenglor_api.detect_target` (which sends `target:pose[WG_USE_CASE, WG_CALIBRATION_TARGET, wig_tcp_pose_string]`).
 2. Creates (or updates) the frame `w_ref_frame`, attached to `world`.
@@ -124,7 +124,7 @@ This workflow lets you re-localize a machine or fixture automatically between ru
 
 !!! note
 
-    `wenglor_api` also provides `calibrate_to_target`, wrapping `calibration:target[WG_USE_CASE, WG_CALIBRATION_TARGET]`, to recalibrate the camera-to-target relation without writing a new calibration file — it is not called by any routine in this example, but is available for custom use cases. See [4.6 Target Pose and Camera-to-Target Calibration](https://wenglor.github.io/robot-vision-generic-string/4_6_0_target_pose_and_camera_to_target/) in the wenglor robot vision manual.
+    `wenglor_api` also provides `calibrate_to_target`, wrapping `calibration:target[WG_USE_CASE, WG_CALIBRATION_TARGET]`, to recalibrate the camera-to-target relation without writing a new calibration file — it is not called by any routine in this example, but is available for custom use cases. See [5.5 Job in uniVision to Get Target Pose or Calibrate Camera to Target](https://wenglor.github.io/robot-vision-generic-string/5_5_0_target_pose_and_camera_to_target/) in the wenglor robot vision manual.
 
 ## Selecting a routine
 

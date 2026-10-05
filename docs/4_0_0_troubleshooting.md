@@ -13,11 +13,11 @@ You can improve calibration accuracy by using more than five calibration poses. 
 
 !!! note
 
-    See the [wenglor Robot Server overview](https://wenglor.github.io/robot-vision-generic-string/4_0_0_robot_vision_server/) in the wenglor robot vision manual for calibration-plate selection, pose-variation recommendations, and how to interpret the reprojection error returned by `calibration:calculate`.
+    See the [wenglor Robot Server overview](https://wenglor.github.io/robot-vision-generic-string/5_1_0_basics_with_robot_server/) in the wenglor robot vision manual for calibration-plate selection, pose-variation recommendations, and how to interpret the reprojection error returned by `calibration:calculate`.
 
 ## Error codes returned by the device
 
-If the robot server returns a negative error code (`-5001` … `-5010`), `wenglor_helpers.check_camera_reply` detects it (reply starts with `-`) and `wenglor_helpers.set_return_error` maps it to a readable popup message before the program halts. For the meaning of each code, see the [Generic Robot Vision Interface → Error codes](https://wenglor.github.io/robot-vision-generic-string/4_7_0_generic_robot_vision_interface/#error-codes) in the wenglor robot vision manual.
+If the robot server returns a negative error code (`-5001` … `-5010`), `wenglor_helpers.check_camera_reply` detects it (reply starts with `-`) and `wenglor_helpers.set_return_error` maps it to a readable popup message before the program halts. For the meaning of each code, see the [Generic Robot Vision API → Error codes](https://wenglor.github.io/robot-vision-generic-string/5_6_0_generic_robot_vision_api/#error-codes) in the wenglor robot vision manual.
 
 ## Program exits unexpectedly
 
@@ -27,7 +27,3 @@ If the robot server returns a negative error code (`-5001` … `-5010`), `wenglo
 | Calibration poses not set | `WG_CALIB_POSE_1` … `WG_CALIB_POSE_5` must not equal `WIG_EMPTY_POSE`; `wenglor_helpers.are_calibration_poses_set` checks each of them before `run_calibration` proceeds. | — |
 | No reply from the camera, or an empty socket read | `wenglor_helpers.check_camera_reply` detects the missing reply. Check the device state via `state[WG_USE_CASE];`. | *"No reply from camera. Exiting program."* |
 | Unknown use case | `WG_USE_CASE` must be exactly `camera_on_robot` or `camera_not_on_robot`; any other value halts `run_calibration`. | *"Unknown use case. Program was aborted."* |
-
-## Documentation revision note
-
-Earlier revisions used lowercase variable names; see [User Configuration](2_0_0_user_configuration.md#connection) for the current names.
